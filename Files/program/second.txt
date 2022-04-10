@@ -1,0 +1,5 @@
+Name, Regular_Hours, Weekend_Hours, Overtime_Hours
+George Smith, 30, 3, 2
+Luke Hobbs, 25, 2, 1
+Martin Hill, 25, 2, 1
+Hannah Zora, 30, 3, 2

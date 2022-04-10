@@ -1,0 +1,5 @@
+Name, Designation, Total_Exp, Regular_Hours, Regular_Hourly_rate, Regular_Hour_Total_pay, Weekend_Hours, Weekend_Hourly_rate, Weekend_Hourly_Total_pay, Overtime_Hours, Overtime_Hourly_rate, Overtime_Hourly_Total_pay, Overall_Total_pay
+George Smith, IT Specialist, 5, 30, 100, 3000, 3, 100, 300, 2, 90, 180, 3480
+Luke Hobbs, Supervisor, 3, 25, 70, 1750, 2, 75, 150, 1, 70, 70, 1970
+Martin Hill, Accountant, 3, 25, 65, 1625, 2, 60, 120, 1, 55, 55, 1800
+Hannah Zora, Secretary, 2, 30, 50, 1500, 3, 55, 165, 2, 45, 90, 1755
