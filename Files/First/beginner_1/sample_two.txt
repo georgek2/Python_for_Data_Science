@@ -1,0 +1,4 @@
+car, a red car, 1, 80000,
+motorbike, BMW electric motorbike, 2, 100000
+house, a four bedroom house, 1, 230000
+phone, a Samsung smartphone, 1, 800 

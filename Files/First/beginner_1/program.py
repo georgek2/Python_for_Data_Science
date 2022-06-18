@@ -1,7 +1,8 @@
 
 
 # Prompt the user for the filename with item details
-filename = input('Enter the filename: ')
+file_one = input('Enter the file one: ') # Contains the headers
+file_two = input('Enter the file two: ') # Holds the actual data
 
 def file_handler():
 
@@ -11,9 +12,12 @@ def file_handler():
             One with text data: item_name and description
             The other with numeric data: quantity and price
     '''
-
-    # Open the file specified for reading
-    with open(filename, 'r') as file:
+    # Get the headers
+    with open(file_one) as file:
+        headers = file.read()
+        headers = headers.split(',')
+    # Open the file specified for reading actual data
+    with open(file_two, 'r') as file:
 
         # Read all the lines in the file
         data = file.readlines()
@@ -23,7 +27,7 @@ def file_handler():
         quant_price = [] # Stores numeric data: quantity and price
 
         # Loop through all the lines
-        for line in data[1:]:
+        for line in data:
 
             item_name = line.split(',')[0] # Grab the item name
             description = line.split(',')[1] # Description
@@ -35,7 +39,7 @@ def file_handler():
             # Append numeric data to numeric list 
             quant_price.append((quantity, price))
 
-    return (item_desc, quant_price) # Return the two lists
+    return (headers, item_desc, quant_price) # Return the headers and the two lists
 
 
 def output_files():
@@ -46,13 +50,13 @@ def output_files():
             One for the text data: Item_name and Description
             Second for the numeric data: Quantity and Price
     '''
-    # Set the two lists created by the file_handler function
-    item_desc, quant_price = file_handler()
 
+    # Set the two lists created by the file_handler function
+    headers, item_desc, quant_price = file_handler()
     # Create the file to store text data
     with open('text_data.txt', 'a') as file:
 
-        file.write('Item, Description\n') # File headers
+        file.write(f'{headers[0]}, {headers[1]}\n') # File headers
 
         for item in item_desc:
 
@@ -62,12 +66,12 @@ def output_files():
     # Create the file to store numeric data
     with open('numeric_data.txt', 'a') as file:
 
-            file.write('Quantity, Price\n') # File headers
+        file.write(f'{headers[2].strip()}, {headers[3]}\n') # File headers
 
-            for qp in quant_price:
+        for qp in quant_price:
 
-                # Write the quantity and price
-                file.write(f'{qp[0].strip()}, {qp[1].strip()} \n')
+            # Write the quantity and price
+            file.write(f'{qp[0].strip()}, {qp[1].strip()} \n')
 
     print('Output files created...')
 
