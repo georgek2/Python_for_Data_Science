@@ -1,9 +1,26 @@
 
 '''
+    **Master how to handle python data types
+    **Become a better python developer
+
     Strings - Working with strings using different methods
     > lower & upper - isupper & islower
     > strip - lstrip & rstrip
     > Capitalize - First letter uppercase
+    > Join strings
+    > Replace strings
+
+    Integers - Working with integers (whole numbers)
+    >
+    >
+    >
+
+    Floats - Working with decimal numbers
+    >
+    >
+    >
+
+    # Type Conversion
 '''
 
 name = 'Lukas Davis'
@@ -37,3 +54,12 @@ print(location_2.rstrip(), '*')
 # Capitalize - First letter uppercase
 name_2 = 'john'
 print(name_2.capitalize())
+
+# Join strings
+f_name = ''.join([name_2, ' Smith'])
+print(f_name)
+print(len(f_name))
+
+# Replace strings
+name = f_name.replace('john', 'Luke')
+print(name)
