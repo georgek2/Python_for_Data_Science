@@ -80,7 +80,7 @@ def look_up(birthdays):
     name = input('Enter a name: ')
 
     # Look it up in the dictionary.
-    # If name is found print birthday
+    # If name is not found print birthday
     print(birthdays.get(name, 'Not found.'))
 
 # The add function adds a new entry into the

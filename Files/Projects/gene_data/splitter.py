@@ -1,21 +1,12 @@
 import csv
 import argparse
 
-from assign import my_io
+# from assign import my_io
 
 def create_data(filename, mode = 'r'):
     with open(filename, mode, newline='') as file:
 
         genes = csv.reader(file, delimiter = '\t')
-        # gene_data = {
-        #     'Gene_Symbol' : [],
-        #     'Gene_Description' : [],
-        #     'Gene_Category' : []
-        # }
-
-        # '''
-        #     Wrong...Just grabbing the key as symbol and desc as value
-        # '''
 
         # Works
         gene_data = {}
@@ -66,22 +57,6 @@ def main():
 
 
 main()
-
-# if __name__ == '__main__':
-#     parser = argparse.ArgumentParser(description='Open chr21_genes.txt, and ask user for a gene name')
-
-#     # parser.add_argument('filename', )
-#     parser.add_argument('-i', '--infile',  help='Path to File to Open',
-#         required=False, default='./chr21_genes.txt' #..
-#     )
-
-#     args = parser.parse_args()
-
-#     get_file(args.infile)
-
-
-
-
 
 
 

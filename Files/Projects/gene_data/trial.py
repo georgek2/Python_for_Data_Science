@@ -1,9 +1,9 @@
 import argparse
-from assign import my_io
+# from assign import my_io
 
 def create_dic(fh_in):
     """
-    Create a dictionary to store gene categories their and descriptions
+    Create a dictionary to store gene categories + descriptions
     """
     desc = {}
     with open(fh_in, 'r') as file:
@@ -14,8 +14,7 @@ def create_dic(fh_in):
         desc[gene] = description
     return desc
 
-create_dic('chr21_genes.txt')
-
+# print(create_dic('chr21_genes.txt'))
 
 def get_cli_args():
     """

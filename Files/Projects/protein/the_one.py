@@ -6,7 +6,7 @@ def splitter(filename, mode='r'):
 
         data = file.readlines()
 
-        new_data = data[:].copy()
+        new_data = data[:24].copy()
 
     sq_starts = []
     ss_starts = []
@@ -56,4 +56,4 @@ def splitter(filename, mode='r'):
     print(f'Found {len(ss_starts)} ss sequences')
 
 
-splitter('mine.txt')
+print(splitter('mine.txt'))
